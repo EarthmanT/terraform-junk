@@ -56,8 +56,8 @@ resource "aws_instance" "shitty_vm" {
   user_data =   data.template_file.template.rendered
 }
 
-resource "aws_eip" "eip" {
-  instance = aws_instance.example_vm.id
+resource "aws_eip" "shitty_vm" {
+  instance = aws_instance.shitty_vm.id
   vpc      = true
 }
 
